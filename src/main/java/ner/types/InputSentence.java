@@ -11,19 +11,19 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** 
- * Updated by JCasGen Sun Oct 07 17:17:36 EDT 2012
+ * Updated by JCasGen Sun Oct 14 13:10:50 EDT 2012
  * XML source: /Users/vchahun/Dropbox/Documents/CMU/Eng/workspace/hw1-vchahune/src/main/resources/uima/TypeSystemDescriptor.xml
  * @generated */
 public class InputSentence extends Annotation {
   /** @generated
    * @ordered 
    */
-  @SuppressWarnings ("hiding")
+
   public final static int typeIndexID = JCasRegistry.register(InputSentence.class);
   /** @generated
    * @ordered 
    */
-  @SuppressWarnings ("hiding")
+
   public final static int type = typeIndexID;
   /** @generated  */
   @Override
@@ -78,24 +78,6 @@ public class InputSentence extends Annotation {
     if (InputSentence_Type.featOkTst && ((InputSentence_Type)jcasType).casFeat_sentenceId == null)
       jcasType.jcas.throwFeatMissing("sentenceId", "ner.types.InputSentence");
     jcasType.ll_cas.ll_setStringValue(addr, ((InputSentence_Type)jcasType).casFeatCode_sentenceId, v);}    
-   
-    
-  //*--------------*
-  //* Feature: text
-
-  /** getter for text - gets 
-   * @generated */
-  public String getText() {
-    if (InputSentence_Type.featOkTst && ((InputSentence_Type)jcasType).casFeat_text == null)
-      jcasType.jcas.throwFeatMissing("text", "ner.types.InputSentence");
-    return jcasType.ll_cas.ll_getStringValue(addr, ((InputSentence_Type)jcasType).casFeatCode_text);}
-    
-  /** setter for text - sets  
-   * @generated */
-  public void setText(String v) {
-    if (InputSentence_Type.featOkTst && ((InputSentence_Type)jcasType).casFeat_text == null)
-      jcasType.jcas.throwFeatMissing("text", "ner.types.InputSentence");
-    jcasType.ll_cas.ll_setStringValue(addr, ((InputSentence_Type)jcasType).casFeatCode_text, v);}    
   }
 
     

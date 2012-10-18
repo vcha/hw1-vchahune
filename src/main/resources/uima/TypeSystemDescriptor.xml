@@ -6,7 +6,7 @@
   <vendor/>
   <types>
     <typeDescription>
-      <name>ner.types.NameAnnotation</name>
+      <name>ner.types.GeneAnnotation</name>
       <description/>
       <supertypeName>uima.tcas.Annotation</supertypeName>
       <features>
@@ -29,11 +29,6 @@
       <features>
         <featureDescription>
           <name>sentenceId</name>
-          <description/>
-          <rangeTypeName>uima.cas.String</rangeTypeName>
-        </featureDescription>
-        <featureDescription>
-          <name>text</name>
           <description/>
           <rangeTypeName>uima.cas.String</rangeTypeName>
         </featureDescription>

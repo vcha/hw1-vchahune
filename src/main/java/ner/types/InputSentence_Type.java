@@ -14,7 +14,7 @@ import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
 /** 
- * Updated by JCasGen Sun Oct 07 17:17:36 EDT 2012
+ * Updated by JCasGen Sun Oct 14 13:10:50 EDT 2012
  * @generated */
 public class InputSentence_Type extends Annotation_Type {
   /** @generated */
@@ -37,11 +37,10 @@ public class InputSentence_Type extends Annotation_Type {
   	  }
     };
   /** @generated */
-  @SuppressWarnings ("hiding")
+
   public final static int typeIndexID = InputSentence.typeIndexID;
   /** @generated 
      @modifiable */
-  @SuppressWarnings ("hiding")
   public final static boolean featOkTst = JCasRegistry.getFeatOkTst("ner.types.InputSentence");
  
   /** @generated */
@@ -61,24 +60,6 @@ public class InputSentence_Type extends Annotation_Type {
     ll_cas.ll_setStringValue(addr, casFeatCode_sentenceId, v);}
     
   
- 
-  /** @generated */
-  final Feature casFeat_text;
-  /** @generated */
-  final int     casFeatCode_text;
-  /** @generated */ 
-  public String getText(int addr) {
-        if (featOkTst && casFeat_text == null)
-      jcas.throwFeatMissing("text", "ner.types.InputSentence");
-    return ll_cas.ll_getStringValue(addr, casFeatCode_text);
-  }
-  /** @generated */    
-  public void setText(int addr, String v) {
-        if (featOkTst && casFeat_text == null)
-      jcas.throwFeatMissing("text", "ner.types.InputSentence");
-    ll_cas.ll_setStringValue(addr, casFeatCode_text, v);}
-    
-  
 
 
 
@@ -91,10 +72,6 @@ public class InputSentence_Type extends Annotation_Type {
  
     casFeat_sentenceId = jcas.getRequiredFeatureDE(casType, "sentenceId", "uima.cas.String", featOkTst);
     casFeatCode_sentenceId  = (null == casFeat_sentenceId) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_sentenceId).getCode();
-
- 
-    casFeat_text = jcas.getRequiredFeatureDE(casType, "text", "uima.cas.String", featOkTst);
-    casFeatCode_text  = (null == casFeat_text) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_text).getCode();
 
   }
 }

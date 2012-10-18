@@ -4,3 +4,6 @@
 *.jar
 *.war
 *.ear
+
+src/main/resources/sample.hyp
+src/main/resources/docs/report.md

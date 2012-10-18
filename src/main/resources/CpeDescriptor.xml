@@ -8,14 +8,19 @@
 		</collectionIterator>
 	</collectionReader>
 	<casProcessors processingUnitThreadCount="1">
-		<casProcessor deployment="integrated" name="Name Annotator">
+		<casProcessor deployment="integrated" name="Gene Annotator">
 			<descriptor>
-				<import name="uima.AEDescriptor" />
+				<import name="uima.AnalysisEngineDescriptor" />
 			</descriptor>
 		</casProcessor>
 		<casProcessor deployment="integrated" name="Annotation Printer">
 			<descriptor>
-				<import name="uima.CasConsumerDescriptor" />
+				<import name="uima.OutputConsumerDescriptor" />
+			</descriptor>
+		</casProcessor>
+		<casProcessor deployment="integrated" name="Annotation Evaluator">
+			<descriptor>
+				<import name="uima.EvaluationConsumerDescriptor" />
 			</descriptor>
 		</casProcessor>
 	</casProcessors>
