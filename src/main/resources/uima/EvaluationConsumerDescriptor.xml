@@ -15,14 +15,7 @@
         <mandatory>false</mandatory>
       </configurationParameter>
     </configurationParameters>
-    <configurationParameterSettings>
-      <nameValuePair>
-        <name>goldAnnotation</name>
-        <value>
-          <string>src/main/resources/data/sample.out</string>
-        </value>
-      </nameValuePair>
-    </configurationParameterSettings>
+    <configurationParameterSettings/>
     <typeSystemDescription>
       <imports>
         <import name="uima.TypeSystemDescriptor"/>
