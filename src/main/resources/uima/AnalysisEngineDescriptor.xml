@@ -20,7 +20,7 @@
       <nameValuePair>
         <name>model</name>
         <value>
-          <string>src/main/resources/models/ne-en-bio-genetag.HmmChunker</string>
+          <string>models/ne-en-bio-genetag.HmmChunker</string>
         </value>
       </nameValuePair>
     </configurationParameterSettings>

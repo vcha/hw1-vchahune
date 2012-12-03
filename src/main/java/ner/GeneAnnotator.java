@@ -1,9 +1,10 @@
 package ner;
 
-import java.io.File;
+import java.io.ObjectInputStream;
+import java.net.URL;
 
-import ner.types.InputSentence;
 import ner.types.GeneAnnotation;
+import ner.types.InputSentence;
 
 import org.apache.uima.UimaContext;
 import org.apache.uima.analysis_component.JCasAnnotator_ImplBase;
@@ -16,7 +17,6 @@ import org.apache.uima.resource.ResourceInitializationException;
 import com.aliasi.chunk.Chunk;
 import com.aliasi.chunk.Chunker;
 import com.aliasi.chunk.Chunking;
-import com.aliasi.util.AbstractExternalizable;
 
 /**
  * Analysis Engine which produces {@link GeneAnnotation} instances from {@link InputSentence} instances
@@ -38,9 +38,9 @@ public class GeneAnnotator extends JCasAnnotator_ImplBase {
    * @throws ResourceInitializationException when the model file cannot be read.
    */
   public void initialize(UimaContext context) throws ResourceInitializationException {
-    String modelFile = (String) context.getConfigParameterValue("model");
+    URL modelFile = getClass().getClassLoader().getResource((String) context.getConfigParameterValue("model"));
     try {
-      chunker = (Chunker) AbstractExternalizable.readObject(new File(modelFile));
+      chunker = (Chunker) new ObjectInputStream(modelFile.openStream()).readObject();
     } catch (Exception e) {
       throw new ResourceInitializationException(e);
     }
